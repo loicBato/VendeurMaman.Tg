@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* font-family: 'Tahoma'; */
+    text-justify: auto;
+}
+
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;
+    padding-right: 2vw;
+    height: 5em;
+    background-color: white;
+    /* background-color: rgb(0, 85, 89); */
+    box-shadow: 0 0.3em 0.3em -0.4em black;
+
+}
+.navbar_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+}
+
+.nav_option {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.nav_name {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: italic;
+  /* color: #F075AA; */
+
+}
+
+.nav_name img {
+    /* border: 1px solid; */
+    width: 12vw;
+}
+
+.nav_option span {
+        /* border: 1px solid; */
+    font-size: 1.1rem;
+    padding: 0.3vw;
+    border-radius: 5px;
+cursor: pointer;
+}
+
+.nav_option span:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.navbar_action {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.navbar_action span {
+    /* border: 1px solid; */
+    font-size: 1.1rem;
+    padding: 0.4vw;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(238, 238, 238);
+}
+
+.navbar_action button {
+    font-size: 1.1rem;
+        border-radius: 5px;
+cursor: pointer;
+background-color: rgb(68, 182, 252);
+border: none;
+color: white;
+font-weight: bold;
+    padding: 0.4vw;
+
+}

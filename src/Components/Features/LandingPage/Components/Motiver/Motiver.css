@@ -1,0 +1,33 @@
+
+
+
+
+.motiver_container {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+    gap: 6vw;
+}
+
+
+.motiver_left h2 {
+    font-size: 2.5rem;
+}
+.motiver_left p {
+    font-size: 1.3rem;
+    color: rgb(72, 72, 72);
+}
+
+.motiver_right {
+    /* border: 1px solid; */
+    width: 60vw;
+        border-radius: 5vw;
+
+}
+
+.motiver_right img {
+    width: 100%;
+    border-radius: 5vw;
+}
