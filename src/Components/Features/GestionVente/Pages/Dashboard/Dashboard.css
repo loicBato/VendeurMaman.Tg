@@ -1,0 +1,45 @@
+
+
+/* .dashboard {
+    margin-top: 5vw;
+    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-bottom: 3vw;
+    border-radius: 6px;
+} */
+
+
+
+
+.dashboard {
+    /* margin: 4vw; */
+}
+
+.dashboard-top {
+    /* box-shadow: 0 0.3em 0.6em -0.4em black; */
+    /* background-color: rgb(255, 255, 255); */
+    padding: 0.01vw 3.5vw;
+    /* margin-bottom: 2vw; */
+    font-size: 1rem;
+    /* border-radius: 6px; */
+
+    /* text-align: center; */
+}
+
+.dashboard-main {
+    box-sizing: border-box;
+    padding: 1vw 3vw;
+    /* margin: 0vw 5vw; */
+    /* padding-top: 1vw; */
+    border-radius: 6px;
+    /* box-shadow: 0 0.3em 0.6em -0.4em black; */
+height: 100vh;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.dashboard-main hr {
+    margin: 0;
+    margin-top: 1.2vw;
+    height: 0.1vw;
+    background-color: rgb(169, 168, 168);
+}

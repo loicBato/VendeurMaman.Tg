@@ -115,7 +115,7 @@ function LoginSign() {
 
             <br />
 
-            <LinkAuth to="/Maman.Tg/inscription" text=" S'inscrire" main_text="Vous n'avez pas de compte ?" />
+            <LinkAuth to="/Maman.Tg/inscription" text=" S'inscrire" main_text="Vous n'avez pas de boutique ?" />
           </div>
 
 

@@ -1,5 +1,5 @@
 // import React from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import './RegisterSign.css'
 import { useContext, useState } from 'react'
 import backgroundImage from '../../../../Assets/MAMAN15.jpeg'
@@ -26,13 +26,13 @@ function RegisterSign() {
     })
 
     const { setUserData, setIsLoggedIn } = useContext(AuthContext)
-
+const [submissionSuccess, setSubmissionSuccess] = useState(false)
     const [errors, setErrors] = useState({})
     const [valid, setValid] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
 
     const handleSubmit = (event) => {
@@ -50,8 +50,13 @@ function RegisterSign() {
         }
         if (values.name === "" || values.name === null) {
             isvalid = false;
-            validationErrors.name = "Veuillez definir votre nom d'utilisateur"
+            validationErrors.name = "Veuillez definir votre nom de la boutique"
         }
+                if (values.address === "" || values.address === null) {
+            isvalid = false;
+            validationErrors.address = "Votre adresse est requise"
+        }
+
         // if (values.email === "" || values.email === null) {
         //     isvalid = false;
         //     validationErrors.email = "L'email est requis"
@@ -91,7 +96,8 @@ function RegisterSign() {
                     toast.success("Vous etes bien enregistrer", {
                         position: 'top-right'
                     })
-                    navigate('/Maman.Tg');
+                    setSubmissionSuccess(true)
+                    // navigate('/Maman.Tg');
                     console.log(setIsLoading)
                 })
                 // .catch(error => console.log(error));
@@ -108,6 +114,16 @@ function RegisterSign() {
                 </div>
             )} */}
 
+            { submissionSuccess && (
+                <div className="success_message">
+                    <h3>Démande de création de compte enrégistrer</h3>
+                    <p>Un email de confirmation vous sera envoyer après vérification...</p>
+                    <button>OK</button>
+                </div>
+            )
+
+            }
+
 
             <form action="" onSubmit={handleSubmit}>
                 <div className="loginsignup" style={{
@@ -118,7 +134,7 @@ function RegisterSign() {
                     <div className="overlay"></div>
 
                     <div className="loginsignup-container">
-                        <h2>Démande d'inscription en tant que vendeur</h2>
+                        <h2>Démande de création de boutique</h2>
                         <hr />
 
                         {/* <div className="inputs"> */}
@@ -145,7 +161,7 @@ function RegisterSign() {
                         name="name"
                         value={values.name}
                         onChange={(e) => setValues({ ...values, name: e.target.value })}
-                        label="Nom d'utilisateur"
+                        label="Nom de la boutique"
                         error={errors.name}
                     />
 
@@ -156,6 +172,24 @@ function RegisterSign() {
                         onChange={(e) => setValues({ ...values, phone_number: e.target.value })}
                         label="Numéro de téléphone"
                         error={errors.phone_number}
+                    />
+
+                    <FormInput
+                        type="text"
+                        name="address"
+                        value={values.address}
+                        onChange={(e) => setValues({ ...values, address: e.target.value })}
+                        label="Adresse"
+                        error={errors.address}
+                    />
+
+                    <FormInput
+                        type="number"
+                        name="number"
+                        value={values.number}
+                        onChange={(e) => setValues({ ...values, number: e.target.value })}
+                        label="N_Carte"
+                        error={errors.number}
                     />
 
                     <FormInput
@@ -183,11 +217,11 @@ function RegisterSign() {
                         label="Confirmez le mot de passe"
                     />
 
-                    <SubmitButton isLoading={isLoading} text="S'inscrire" />
+                    <SubmitButton isLoading={isLoading} text="Soumettre la demande" />
 
                     <br />
 
-                    <LinkAuth to="/Maman.Tg/connexion" text=" Se connecter" main_text='Vous avez déjà un compte ?' />
+                    <LinkAuth to="/Maman.Tg/connexion" text=" Se connecter" main_text='Vous avez déjà une boutique ?' />
 
 
 

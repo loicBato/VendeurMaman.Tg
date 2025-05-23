@@ -1,0 +1,48 @@
+
+
+
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2vw;
+    margin-bottom: 1vw;
+}
+
+.cardbox {
+    position: relative;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 1.5em; */
+    /* width: 20vw; */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardbox-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 0.5vw;
+}
+
+.price span {
+    color: rgb(6, 212, 6);
+    font-size: 0.8vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price p {
+    font-size: 1.2vw;
+    font-weight: bold;
+}

@@ -15,7 +15,7 @@ function Navbar() {
             </div>
           </Link>
           <div className="nav_option">
-            <span>Conditions</span>
+           <Link to={'/Maman.tg/gestionnaire'}> <span>Conditions</span></Link>
             <Link to='/Maman.tg/tarifs' style={{ textDecoration: 'none', color: 'black' }}> <span>Tarifs</span></Link>
           </div>
         </div>
