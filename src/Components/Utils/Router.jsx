@@ -12,6 +12,7 @@ import PostulantVendeur from '../Features/Pages/PostulantVendeur/PostulantVendeu
 import DemandeForm from '../Features/DemandeForm/Pages/DemandeForm'
 import Conditions from '../Features/Pages/Conditions/Conditions'
 import Boutiques from '../Features/Pages/Boutiques/Boutiques'
+import SuiviDemande from '../Features/DemandeForm/Pages/SuiviDemande'
 
 export default function Router() {
 
@@ -30,6 +31,7 @@ export default function Router() {
                         <Route path="/Maman.Tg/tarifs" element={<Tarifs />} />
                         <Route path="/Maman.Tg/cgv" element={<Conditions />} />
                         <Route path="/Maman.Tg/boutiques" element={<Boutiques />} />
+                        <Route path="/Maman.Tg/suivi_demande" element={<SuiviDemande />} />
                         <Route path="/Maman.Tg/acceuil_postulant_vendeur" element={<PostulantVendeur />} />
                         <Route path="/Maman.Tg/formulaire_de_demande" element={<DemandeForm />} />
                         <Route path="/Maman.tg/gestionnaire/*" element={<Gestionnaire />} />

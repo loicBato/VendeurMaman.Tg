@@ -26,6 +26,7 @@ import ListTransaction from '../ListTransaction/ListTransaction';
 import Livraisons from '../Livraisons/Livraisons';
 import { AuthContext } from '../../../../Context/AuthContext';
 import LoginSign from '../../../Authentification/Pages/LoginSignUp/LoginSign';
+import MesBoutiques from '../MesBoutiques/MesBoutiques';
 
 
 function Gestionnaire() {
@@ -200,6 +201,16 @@ function Gestionnaire() {
                 >
                   <FaUsers style={{ marginRight: '8px', width: '2vw', fontSize: '0.9vw' }} />Utilisateurs</MenuItem>
  */}
+<span>
+                  <h4>Boutiques</h4>
+                </span>
+                <MenuItem
+                  component={<Link to="/Maman.tg/gestionnaire/mes_boutiques" />}
+                  active={location.pathname.endsWith('/gestionnaire/mes_boutiques')}
+                >
+                  <FaUserCircle style={{ marginRight: '8px', width: '2vw', fontSize: '0.9vw' }} />Mes boutiques</MenuItem>
+
+
                 <span>
                   <h4>Compte</h4>
                 </span>
@@ -222,9 +233,10 @@ function Gestionnaire() {
                 <Route path='addarticles' element={<AddProduct />} />
                 <Route path='listarticles' element={<ListProduct />} />
                 {/* <Route path='/listcommande' element={<ListAchat />} /> */}
-                <Route path='/transaction' element={<ListTransaction />} />
-                <Route path='/livraisons' element={<Livraisons />} />
+                <Route path='transaction' element={<ListTransaction />} />
+                <Route path='livraisons' element={<Livraisons />} />
                 <Route path='profils' element={<Profil />} />
+                <Route path='mes_boutiques' element={<MesBoutiques />} />
                 {/* <Route path="*" element={<h2>Page non trouvée</h2>} /> */}
 
                 <Route index element={<Navigate to="tableau" replace />} />

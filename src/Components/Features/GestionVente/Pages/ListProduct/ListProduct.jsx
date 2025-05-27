@@ -41,21 +41,20 @@ function ListProduct() {
 
   const fetchData = (page, name = '', status = '') => {
 
-let url = `/vendeur/items?page=${page}`;
+let url = `/vendeur/my_store_items?page=${page}`;
 if (name) url += `&name=${encodeURIComponent(name)}`;
 if (status) url += `&status=${encodeURIComponent(status)}`;
 
     Axios.get(url)
       .then((result) => {
-        const articlesWithImages = result.data.data.items.map(article => ({
+        const articlesWithImages = result.data.data.store_items.map(article => ({
           ...article,
-          images: article.images.map(image => ({
+          images: Array.isArray(article.images) ? article.images.map(image => ({
             id: image.id,
             titre: image.titre,
             url: `https://maman.cofalab.com/api/items/${article.ref}/image`
-          })),
-          // status: article.quantite <= 5 ? 'Rupture' : 'Insuffisant'
-          //   && article.quantite <= 10 ? 'Insuffisant' : 'Disponible'
+          }))
+          : []
         }));
         setData(articlesWithImages);
         setPageCount(result.data.data.meta.last_page);
@@ -221,6 +220,7 @@ if (status) url += `&status=${encodeURIComponent(status)}`;
                       <td>#</td>
                       <td>Image</td>
                       <td>Nom de l'article</td>
+                      <td>Boutiques</td>
                       <td>Mini-description</td>
                       <td>Description</td>
                       <td>Categories</td>
@@ -242,6 +242,7 @@ if (status) url += `&status=${encodeURIComponent(status)}`;
                           <img src={product.images.length > 0 ? product.images[0].url : `https://maman.cofalab.com/api/items/${product.ref}/image/`} alt='' className='image' />
                         </td>
                         <td className='achatlivre_td' onClick={() => handleOpenModal(product)}>{product.name}</td>
+                        <td className='achatlivre_td'>{product.store.name}</td>
                         <td className='achatlivre_td'>{product.mini_description}</td>
                         <td className='achatlivre_td'>{product.description}</td>
                         <td className='achatlivre_td'>{product.categories.map(cat => cat.name)}</td>

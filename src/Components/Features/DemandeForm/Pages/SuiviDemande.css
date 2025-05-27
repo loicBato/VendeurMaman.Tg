@@ -1,0 +1,16 @@
+
+
+    .suivi_demande {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vw;
+        padding: 10vw;
+    }
+
+    .suivi_demande head {
+        padding: 5vw;
+        
+
+       
+    }

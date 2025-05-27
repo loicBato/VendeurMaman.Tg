@@ -167,7 +167,7 @@ background-color: rgb(255, 255, 255);
 
 .table tr {
     display: grid;
-    grid-template-columns: 0.4fr 0.8fr 1.5fr 1.3fr 1.5fr 1.2fr  1fr 1fr 0.8fr 1fr 0.8fr;
+    grid-template-columns: 0.4fr 0.8fr 1.5fr 1.3fr 1.3fr 1.5fr 1.2fr  1fr 1fr 0.8fr 1fr 0.8fr;
 }
 
 
@@ -480,4 +480,34 @@ border-radius: 5px;
 
 .delete_btn2 {
     background-color: rgb(0, 85, 89);
+}
+
+.pagination {
+    display: flex;
+    gap: 0.6vw;
+    margin-top: 1vw;
+    list-style-type: none; 
+}
+
+.page-item1,
+.page-item {
+    padding: 0.1vw;
+    cursor: pointer;
+    color: rgb(70, 70, 70);
+}
+
+.page-item {
+    width: 1vw;
+    text-align: center;
+}
+
+.active {
+    /* background-color: blue; */
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 4px;
+}
+
+.page-item1:hover {
+    background-color: rgb(234, 234, 234);
+
 }
