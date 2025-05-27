@@ -19,10 +19,10 @@ function Tarifs() {
                             <h3>Plan Découverte</h3>
                         </div>
                         <div className="tarifs_price">
-                            <h1>0 FCFA <span>/Mois</span></h1>
-                            <span>Pour une durée de 4 mois</span>
+                            <h1>0 FCFA </h1>
+                            <span>Pour une durée de 30 jours</span>
                         </div>
-                        <button>Souscrire à l'abonnement</button>
+                        {/* <button>Souscrire à l'abonnement</button> */}
                         <div className="tarifs_decription">
                             <ul>
                                 <li>✅ Jusqu'à 10 produits listés</li>

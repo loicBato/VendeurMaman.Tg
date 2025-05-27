@@ -1,0 +1,132 @@
+
+.addoption {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.addlivraison_main {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding-top: 1vw;
+}
+
+.addlivraison, .addpayement {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 2vw;
+
+}
+
+.addlivraison {
+    border-right: 2px solid rgb(201, 200, 200);
+    border-bottom: 2px solid rgb(201, 200, 200);
+
+}
+
+.addpayement {
+    border-left: 2px solid rgb(201, 200, 200);
+    border-bottom: 2px solid rgb(201, 200, 200);
+
+}
+
+.addbtn {
+    /* border: 1px solid; */
+    margin-top: 1.5vw;
+    /* height: 2vw; */
+    display: flex;
+    justify-content: end;
+}
+
+.addbtn button {
+    padding: 0.5vw;
+    border: none;
+    border-radius: 5px;
+    background-color: #005559;
+    /* background-color: #387F39; */
+    color: white;
+}
+
+.reference {
+    display: flex;
+    flex-direction: column;
+}
+
+.reference input {
+    height: 1.6vw;
+    width: 13vw;
+    font-size: 1.1rem;
+    padding-left: 0.5vw;
+    border: 1px solid rgb(162, 161, 161);
+    border-radius: 5px;
+}
+
+.reference label {
+    padding-bottom: 0.4vw;
+    color: rgb(67, 67, 67);
+}
+
+.addlivraisons-main {
+    box-sizing: border-box;
+    padding: 4vw 3vw;
+    padding-top: 1vw;
+    border-radius: 6px;
+}
+
+
+.addlivraisons-table {
+    width: 100%;
+}
+
+
+.addlivraisons-main thead {
+    /* background-color: rgb(194, 193, 193); */
+    color: black;
+    font-weight: bold;
+    background-color: rgb(242, 243, 245);
+
+}
+
+.addlivraisons-main tr {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr 0.8fr 1fr  1fr 1.3fr 0.5fr 0.5fr;
+}
+
+
+.addlivraisons-main th,
+.addlivraisons-main td {
+    padding: 0.7rem 0.7rem;
+    /* width: 5%; */
+}
+
+
+.addlivraisons-main td {
+    border-bottom: 1px solid rgb(206, 205, 205);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1.3rem;
+}
+
+.addlivraisons-main tbody tr:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+/* .labelle-livre {
+    width: 3vw;
+    text-align: center;
+    background-color: rgb(5, 215, 117);
+}
+
+
+.labelle-attente {
+        width: 3vw;
+        text-align: center;
+    background-color: rgb(224, 96, 96);
+} */
+
+.modals_contain_btn {
+    display: flex;
+}
+

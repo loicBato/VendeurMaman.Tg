@@ -59,6 +59,30 @@ const AuthProvider = (props) => {
     }
   };
 
+  const loginPostulant = async (identifier, password) => {
+    try {
+      const response = await Axios.post('/login/postulant_vendeur', {
+        email_or_phone: identifier,
+        password: password,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (response.status === 200) {
+        const { token, user } = response.data.data;
+        localStorage.setItem('token', token);
+        setUserData(user);
+        setIsLoggedIn(true);
+      } else {
+        throw new Error('Erreur de connexion')
+      }
+    } catch (error) {
+      console.error('Erreur lors de la connexion:', error);
+      throw error;
+    }
+  };
+
 
   const logout = async () => {
     try {
@@ -88,6 +112,7 @@ const AuthProvider = (props) => {
 
   const contextValue = {
     login,
+    loginPostulant,
     logout,
     isAuthenticated,
     getCurrentUser,

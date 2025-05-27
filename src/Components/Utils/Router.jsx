@@ -8,6 +8,10 @@ import RegisterSign from '../Features/Authentification/Pages/LoginRegister/Regis
 import ResetPassword from '../Features/Authentification/Pages/LoginReset/ResetPassword'
 import ForgotPassword from '../Features/Authentification/Pages/ForgetAuth/ForgotPassword'
 import Tarifs from '../Features/Pages/Tarifs/Tarifs'
+import PostulantVendeur from '../Features/Pages/PostulantVendeur/PostulantVendeur'
+import DemandeForm from '../Features/DemandeForm/Pages/DemandeForm'
+import Conditions from '../Features/Pages/Conditions/Conditions'
+import Boutiques from '../Features/Pages/Boutiques/Boutiques'
 
 export default function Router() {
 
@@ -24,8 +28,11 @@ export default function Router() {
                         <Route path="/Maman.Tg/mot_de_passe_oublié" element={<ForgotPassword />} />
                         <Route path="/Maman.Tg/reset_password" element={<ResetPassword />} />
                         <Route path="/Maman.Tg/tarifs" element={<Tarifs />} />
+                        <Route path="/Maman.Tg/cgv" element={<Conditions />} />
+                        <Route path="/Maman.Tg/boutiques" element={<Boutiques />} />
+                        <Route path="/Maman.Tg/acceuil_postulant_vendeur" element={<PostulantVendeur />} />
+                        <Route path="/Maman.Tg/formulaire_de_demande" element={<DemandeForm />} />
                         <Route path="/Maman.tg/gestionnaire/*" element={<Gestionnaire />} />
-                       
                         
                     </Routes>
                 </div>

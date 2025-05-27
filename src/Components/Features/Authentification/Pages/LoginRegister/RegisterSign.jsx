@@ -11,6 +11,7 @@ import PasswordInput from '../../Components/PasswordInput/PasswordInput'
 import FormInput from '../../Components/FormInput/FormInput'
 import Axios from '../../../../Utils/Axios'
 import { AuthContext } from '../../../../Context/AuthContext'
+import { useNavigate } from 'react-router'
 // import fileur from '../Components/Assets/fileur.gif'
 
 function RegisterSign() {
@@ -26,13 +27,13 @@ function RegisterSign() {
     })
 
     const { setUserData, setIsLoggedIn } = useContext(AuthContext)
-const [submissionSuccess, setSubmissionSuccess] = useState(false)
+// const [submissionSuccess, setSubmissionSuccess] = useState(false)
     const [errors, setErrors] = useState({})
     const [valid, setValid] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
 
     const handleSubmit = (event) => {
@@ -96,8 +97,8 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                     toast.success("Vous etes bien enregistrer", {
                         position: 'top-right'
                     })
-                    setSubmissionSuccess(true)
-                    // navigate('/Maman.Tg');
+                    // setSubmissionSuccess(true)
+                    navigate('/Maman.Tg/acceuil_postulant_vendeur');
                     console.log(setIsLoading)
                 })
                 // .catch(error => console.log(error));
@@ -114,7 +115,7 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                 </div>
             )} */}
 
-            { submissionSuccess && (
+            {/* { submissionSuccess && (
                 <div className="success_message">
                     <h3>Démande de création de compte enrégistrer</h3>
                     <p>Un email de confirmation vous sera envoyer après vérification...</p>
@@ -122,7 +123,7 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                 </div>
             )
 
-            }
+            } */}
 
 
             <form action="" onSubmit={handleSubmit}>
@@ -134,7 +135,7 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                     <div className="overlay"></div>
 
                     <div className="loginsignup-container">
-                        <h2>Démande de création de boutique</h2>
+                        <h2>Inscription vendeur</h2>
                         <hr />
 
                         {/* <div className="inputs"> */}
@@ -161,7 +162,7 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                         name="name"
                         value={values.name}
                         onChange={(e) => setValues({ ...values, name: e.target.value })}
-                        label="Nom de la boutique"
+                        label="Nom d'utilisateur"
                         error={errors.name}
                     />
 
@@ -174,23 +175,23 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                         error={errors.phone_number}
                     />
 
-                    <FormInput
+                    {/* <FormInput
                         type="text"
                         name="address"
                         value={values.address}
                         onChange={(e) => setValues({ ...values, address: e.target.value })}
                         label="Adresse"
                         error={errors.address}
-                    />
+                    /> */}
 
-                    <FormInput
+                    {/* <FormInput
                         type="number"
                         name="number"
                         value={values.number}
                         onChange={(e) => setValues({ ...values, number: e.target.value })}
                         label="N_Carte"
                         error={errors.number}
-                    />
+                    /> */}
 
                     <FormInput
                         type="email"
@@ -217,7 +218,7 @@ const [submissionSuccess, setSubmissionSuccess] = useState(false)
                         label="Confirmez le mot de passe"
                     />
 
-                    <SubmitButton isLoading={isLoading} text="Soumettre la demande" />
+                    <SubmitButton isLoading={isLoading} text="S'inscrire" />
 
                     <br />
 

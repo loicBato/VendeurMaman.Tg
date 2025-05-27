@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+.conditions {
+    margin-left: 13vw;
+    margin-right: 13vw;
+    margin-bottom: 5vw;
+    margin-top: 2vw;
+    line-height: 1.5vw;
+
+}
+
+.conditions h1 {
+    text-align: center;
+    padding: 1vw;
+}
+
+.conditions p, .conditions li {
+    letter-spacing: 0.02vw;
+}
+
+.conditions h2 {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,196 @@
+
+
+
+
+
+.livraisons-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1vw 3.5vw;
+    margin-bottom: 1vw;
+    font-size: 1rem;
+}
+
+.recherche {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+}
+
+.recherche label {
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+    font-size: 1.2rem;
+}
+
+.recherche input {
+    height: 1.5vw;
+    border-radius: 5px;
+    padding-left: 0.6vw;
+    border: 1px solid rgb(188, 186, 186);
+    outline: none;
+    font-size: 1rem;
+    color: black;
+}
+
+
+.livraisons-main {
+    box-sizing: border-box;
+    padding: 4vw 3vw;
+    padding-top: 1vw;
+    border-radius: 6px;
+}
+
+.livraisons_main {
+    display: block;
+    overflow: hidden;
+    table-layout: auto;
+    border-collapse: collapse;
+    white-space: nowrap;
+    margin: auto;
+    overflow-y: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0.3em 0.6em -0.4em black;
+
+}
+
+.livraisons-table {
+    width: 100%;
+}
+
+.livraisons_main nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2vw;
+}
+
+
+.livraisons-main thead {
+    /* background-color: rgb(194, 193, 193); */
+    color: black;
+    font-weight: bold;
+    background-color: rgb(242, 243, 245);
+
+}
+
+.livraisons-main tr {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr 0.8fr 1fr  1fr 1.3fr 0.5fr 0.5fr 0.7fr;
+}
+
+
+.livraisons-main th,
+.livraisons-main td {
+    padding: 0.7rem 0.7rem;
+    /* width: 5%; */
+}
+
+
+.livraisons-main td {
+    border-bottom: 1px solid rgb(206, 205, 205);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1.3rem;
+}
+
+.livraisons-main tbody tr:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+.labelle-livre {
+    width: 3vw;
+    text-align: center;
+    background-color: rgb(5, 215, 117);
+}
+
+
+.labelle-attente {
+        width: 3vw;
+        text-align: center;
+    background-color: rgb(224, 96, 96);
+}
+
+
+
+
+
+
+.modals {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.modals_contain {
+    padding: 2em;
+    padding-top: 0.5vw;
+    padding-bottom: 1vw;
+    background-color: white;
+    width: 40em;
+    /* height: 50em; */
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.modals_contain hr {
+    margin: 0;
+}
+
+.modals_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+}
+
+.modals_top h4 {
+    text-align: center;
+    /* margin-left: 10vw; */
+    color: rgb(110, 110, 110);
+}
+
+.modals_top button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    cursor: pointer;
+    /* padding: 0.2vw; */
+}
+
+.modals_top button:hover {
+    background-color: rgb(222, 221, 221);
+    border-radius: 15px;
+}
+
+.modals_contain_btn {
+    display: flex;
+    justify-content: space-between;
+    height: 2.6em;
+    margin-top: 2vw;
+}
+
+.modals_contain_btn button {
+    width: 15%;
+    border: none;
+    color: white;
+   background-color: rgb(0, 85, 89);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}

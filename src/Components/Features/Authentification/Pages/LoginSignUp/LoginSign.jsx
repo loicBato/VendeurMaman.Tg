@@ -10,6 +10,8 @@ import SubmitButton from '../../Components/SubmitButton/SubmitButton';
 import PasswordInput from '../../Components/PasswordInput/PasswordInput';
 import FormInput from '../../Components/FormInput/FormInput';
 import { AuthContext } from '../../../../Context/AuthContext';
+import LoginPostulantSign from '../LoginPostulantSign/LoginPostulantSign';
+import { Tab, TabList, Tabs } from 'react-tabs';
 
 
 function LoginSign() {
@@ -57,7 +59,7 @@ function LoginSign() {
 
         await login(identifier, password);
         toast.success("Connexion réussie !", { position: "top-right" });
-        navigate(-1);
+        navigate('/Maman.tg/gestionnaire');
       } catch (error) {
         console.error("Erreur lors de la connexion :", error.message);
 
@@ -73,55 +75,77 @@ function LoginSign() {
     }
   };
 
+  const [activeTab, setActiveTab] = useState("Tous les commandes")
+
+  const handleTabClick = (selectedTab) => {
+    setActiveTab(selectedTab);
+  };
+
+
 
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit}>
-        <div className="loginsignup"  style={{
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }} > 
+      <div className="loginsignup" style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }} >
 
-  <div className="overlay" />
+        <div className="overlay" />
 
-          <div className="loginsignup-container">
-            <h2>Connexion</h2>
-            <hr />
+        <div className="loginsignup-container">
+          <h2>Connexion {activeTab} </h2>
+          <hr />
+          <div className='loginsignup_tabs'>
+            <Tabs>
+              <TabList>
+                <Tab onClick={() => handleTabClick('Vendeur')}>Vendeur</Tab>
+                <Tab onClick={() => handleTabClick('Postulant')}>Postulant</Tab>
+              </TabList>
+            </Tabs>
+          </div>
+          <div>
+            {activeTab === 'Vendeur' &&
+              <form action="" onSubmit={handleSubmit}>
 
-            {/* <div className="inputs"> */}
+                <div className="loginsignup_main">
+                  <FormInput
+                    type="text"
+                    name="identifier"
+                    value={values.identifier}
+                    onChange={(e) => setValues({ ...values, identifier: e.target.value })}
+                    label="E-mail / Numéro de téléphone"
+                    error={errors.identifier}
+                  />
 
-            <FormInput
-              type="text"
-              name="identifier"
-              value={values.identifier}
-              onChange={(e) => setValues({ ...values, identifier: e.target.value })}
-              label="E-mail / Numéro de téléphone"
-              error={errors.identifier}
-            />
+                  <PasswordInput
+                    value={values.password}
+                    onChange={(e) => setValues({ ...values, password: e.target.value })}
+                    showPassword={showPassword}
+                    togglePassword={() => setShowPassword(!showPassword)}
+                    error={errors.password}
+                  />
 
-            <PasswordInput
-              value={values.password}
-              onChange={(e) => setValues({ ...values, password: e.target.value })}
-              showPassword={showPassword}
-              togglePassword={() => setShowPassword(!showPassword)}
-              error={errors.password}
-            />
+                  <LinkAuth to="/Maman.tg/mot_de_passe_oublié" text=" Cliquez ici !" main_text="Mot de passe oublié ?" />
 
-            <LinkAuth to="/Maman.tg/mot_de_passe_oublié" text=" Cliquez ici !" main_text="Mot de passe oublié ?" />
+                  <SubmitButton isLoading={isLoading} text="Se connecter" />
 
-            <SubmitButton isLoading={isLoading} text="Se connecter" />
+                  <br />
 
-            <br />
+                  <LinkAuth to="/Maman.Tg/inscription" text=" S'inscrire" main_text="Vous n'avez pas de boutique ?" />
+                </div>
+              </form>
 
-            <LinkAuth to="/Maman.Tg/inscription" text=" S'inscrire" main_text="Vous n'avez pas de boutique ?" />
+            }
+            {activeTab === 'Postulant' && <LoginPostulantSign />}
+
           </div>
 
-
-
         </div>
-      </form>
+
+
+      </div>
 
 
     </>

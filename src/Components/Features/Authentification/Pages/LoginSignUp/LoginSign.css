@@ -20,6 +20,48 @@
   z-index: 1;
 }
 
+.loginsignup_tabs .react-tabs__tab-list {
+    display: flex;
+    gap: 0.5vw;
+    padding: 0;
+    /* margin-left: 4vw;
+    margin-right: 4vw; */
+    margin-bottom: 2vw;
+    /* background-color: rgb(229, 229, 229); */
+        /* box-shadow: 0 0.3em 0.6em -0.4em black; */
+
+}
+
+
+.loginsignup_tabs .react-tabs__tab {
+    width: 100%;
+    padding: 0.6vw;
+    text-align: center;
+    border: 1px solid rgb(211, 209, 209);
+    font-size: 1em;
+    list-style: none;
+    /* font-weight: bold; */
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+}
+
+.loginsignup_tabs .react-tabs__tab:hover {
+    background-color: #c2ffc2;
+}
+
+
+/* .react-tabs__tab:hover, */
+.loginsignup_tabs .react-tabs__tab--selected  {
+    outline: none;
+    /* border-bottom: 5px solid rgb(252, 145, 83); */
+    font-weight: bold;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0.3em 0.6em -0.4em black;
+} 
+
+
+
 .loginsignup-container {
     position: relative;
     z-index: 2;

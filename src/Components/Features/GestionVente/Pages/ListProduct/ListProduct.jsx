@@ -41,7 +41,7 @@ function ListProduct() {
 
   const fetchData = (page, name = '', status = '') => {
 
-let url = `/admin/items?page=${page}`;
+let url = `/vendeur/items?page=${page}`;
 if (name) url += `&name=${encodeURIComponent(name)}`;
 if (status) url += `&status=${encodeURIComponent(status)}`;
 
@@ -102,7 +102,7 @@ if (status) url += `&status=${encodeURIComponent(status)}`;
 
   const handleDeleteProduct = async (ref) => {
     try {
-      await Axios.delete(`/admin/items/${ref}`);
+      await Axios.delete(`/vendeur/items/${ref}`);
       setData(prevState => prevState.filter(product => product.ref !== ref));
       handleCloseModale();
     } catch (error) {
@@ -169,7 +169,7 @@ if (status) url += `&status=${encodeURIComponent(status)}`;
     <>
       <div className="list-product">
         <div className="product-top">
-          <h2>Gestion des articles</h2>
+          <h2>Gestion de mes articles</h2>
         </div>
         <div className="product_action">
           <div className="import">

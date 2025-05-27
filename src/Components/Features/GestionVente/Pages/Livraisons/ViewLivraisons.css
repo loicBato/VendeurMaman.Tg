@@ -1,0 +1,36 @@
+
+
+
+.addlivraison_reference {
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewlivraisons_main {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.date_livraison {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+}
+
+.date_livraison label {
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+    font-size: 1rem;
+}
+
+.date_livraison input {
+    width: 30%;
+    height: 1.8vw;
+    border-radius: 5px;
+    padding-left: 0.6vw;
+    border: 1px solid rgb(188, 186, 186);
+    outline: none;
+    font-size: 1rem;
+    color: black;
+}

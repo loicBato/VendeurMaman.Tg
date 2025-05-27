@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 // import React from 'react'
 
 import { useEffect, useState } from "react";
@@ -53,7 +52,7 @@ function ViewProduct({ product, handleCloseModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true)
-    Axios.put(`/admin/items/${product.ref}`, updatedProduct)
+    Axios.put(`/vendeur/items/${product.ref}`, updatedProduct)
       .then((response) => {
         // setUpdatedProduct(response.data.data.articles)
         
